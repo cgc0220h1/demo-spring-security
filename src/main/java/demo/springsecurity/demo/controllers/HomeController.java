@@ -21,4 +21,9 @@ public class HomeController {
     public ModelAndView showHomepage() {
         return new ModelAndView("index");
     }
+
+    @GetMapping("/login")
+    public ModelAndView showLoginForm() {
+        return new ModelAndView("login");
+    }
 }
