@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/").access("hasRole('ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/").access("hasRole('ADMIN')");
         //Chặn các request vào trang chủ phải có role admin
         http.authorizeRequests().antMatchers("/login").permitAll();
         //Cho phép các request vào trang Login được vào thoải mái
